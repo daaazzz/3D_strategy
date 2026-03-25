@@ -18,7 +18,7 @@ public class MouseResolver : MonoBehaviour
                 OnHoverEnter?.Invoke(selectable);
             }*/
 
-            ISelectable selectable = GetComponentInParent<ISelectable>();
+            ISelectable selectable = hit.transform.GetComponentInParent<ISelectable>();
             OnHoverEnter?.Invoke(selectable);
         }
     }
