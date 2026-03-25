@@ -129,6 +129,8 @@ GameObject:
   m_Component:
   - component: {fileID: 837956983}
   - component: {fileID: 837956982}
+  - component: {fileID: 837956984}
+  - component: {fileID: 837956986}
   m_Layer: 0
   m_Name: Unit
   m_TagString: Untagged
@@ -149,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Outline
   outlineMode: 0
-  outlineColor: {r: 0, g: 1, b: 0.90171766, a: 1}
+  outlineColor: {r: 0, g: 1, b: 1, a: 1}
   outlineWidth: 10
   precomputeOutline: 0
   bakeKeys: []
@@ -170,6 +172,38 @@ Transform:
   - {fileID: 846940329}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &837956984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837956981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4347318526f6fa8408de043ccc8a79e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnitSelection
+  m_layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  m_outline: {fileID: 837956982}
+  m_hoverOutlineWidth: 10
+  m_hoverOutlineColor: {r: 0, g: 1, b: 1, a: 1}
+--- !u!114 &837956986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837956981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 175fe390417c5814ea3e6dcdb8252925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Unit
+  m_mouseResolver: {fileID: 1859621818}
+  m_unitSelection: {fileID: 837956984}
 --- !u!1 &846940328
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,6 +492,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1859621817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1859621819}
+  - component: {fileID: 1859621818}
+  m_Layer: 0
+  m_Name: MouseResolver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1859621818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859621817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c13b6c7aefba2e42b590b11bb080845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MouseResolver
+--- !u!4 &1859621819
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859621817}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.50549, y: 5.32565, z: 3.68938}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2082900819
 GameObject:
   m_ObjectHideFlags: 0
@@ -661,3 +739,4 @@ SceneRoots:
   - {fileID: 1952827344000336780}
   - {fileID: 1769004069}
   - {fileID: 837956983}
+  - {fileID: 1859621819}
